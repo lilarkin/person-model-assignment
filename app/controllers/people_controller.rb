@@ -1,4 +1,4 @@
-class PersonsController < ApplicationController
+class PeopleController < ApplicationController
   
   def index
     @persons = Person.all
@@ -37,7 +37,7 @@ class PersonsController < ApplicationController
   def destroy
     @person = Person.find(params[:id])
     @person.destroy
-    redirect_to persons_path
+    redirect_to people_path
   end
 
   private

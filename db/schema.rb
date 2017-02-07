@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170207204942) do
 
   create_table "people", force: :cascade do |t|
     t.string   "name",                      null: false
-    t.string   "age",                       null: false
+    t.integer  "age",                       null: false
     t.string   "eye_color",                 null: false
     t.string   "hair_color",                null: false
     t.string   "gender",                    null: false

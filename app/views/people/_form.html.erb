@@ -1,3 +1,12 @@
+<% if @person.errors.any? %>
+  <h3> <%= @person.errors.count %> Errors </h3>
+  <ul>
+    <% @person.errors.full_messages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @person do |f| %>
   <div>
     <%= f.label :name %>
@@ -6,7 +15,7 @@
 
   <div>
     <%= f.label :age %>
-    <%= f.text_field :age %>
+    <%= f.number_field :age %>
   </div>
 
   <div>

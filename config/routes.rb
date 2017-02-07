@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root 'persons#index'
+  root 'people#index'
 
-  resources :persons
-  # get '/people', to: 'persons#index', as: 'people'
+  resources :people
 end
